@@ -32,6 +32,7 @@ public class DataList {
             }
 
             else {
+                try{
                 if (operationID.equals("1")) {
                     if (Integer.parseInt(stringVariable) > totalQuantity) {
                         System.out.print("Item name: " + goods.get(i - 1).getItemName() + ";");
@@ -42,6 +43,11 @@ public class DataList {
                     }
                     totalQuantity = goods.get(i).getQuantity();
                 }
+                }  catch (Exception e){
+                    System.out.println("Blogai įvedėte prekių skaičių");
+                    return;
+                }
+
                 try{
                 if(operationID.equals("2")){
                     SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");

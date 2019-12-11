@@ -10,12 +10,12 @@ public class CSVreader {
 
     public ArrayList <Goods> readGoods(String fileName) {
         SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        BufferedReader br = null;
+        BufferedReader br ;
         try {
             br = new BufferedReader(new FileReader(fileName));
 
-            ArrayList<Goods> list = new ArrayList<Goods>();
-            String line = "";
+            ArrayList<Goods> list = new ArrayList<>();
+            String line;
             int iteration = 0;
             while ((line = br.readLine()) != null) {
                 if(iteration == 0) {
